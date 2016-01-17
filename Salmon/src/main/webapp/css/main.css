@@ -1,0 +1,22 @@
+html, body { padding: 0px; margin: 0px; }
+
+header {
+    height: 319px;
+    background-image: url(../images/main/mainTitle.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-color: #00265A;
+    
+    margin-bottom: 20px;
+}
+
+#login, #notice { display: inline-block; }
+#contents, footer {
+    width: 930px;
+    margin: auto;
+}
+
+#login { width: 260px; margin-right: 20px; border: 1px solid #969696; background-color: #EFEFEF; padding: 20px; }
+#notice { width: 600px; }
+
+footer { font-size: 9pt; color: #969696; margin-top: 20px; }
