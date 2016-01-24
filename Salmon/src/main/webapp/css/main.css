@@ -1,4 +1,4 @@
-html, body { padding: 0px; margin: 0px; }
+html, body { padding: 0px; margin: 0px; font-family: "NanumGothic"; font-size: 12px; }
 
 header {
     height: 319px;
@@ -10,13 +10,21 @@ header {
     margin-bottom: 20px;
 }
 
-#login, #notice { display: inline-block; }
+#login, #notice { display: inline-block; vertical-align: top; }
 #contents, footer {
     width: 930px;
     margin: auto;
 }
 
-#login { width: 260px; margin-right: 20px; border: 1px solid #969696; background-color: #EFEFEF; padding: 20px; }
-#notice { width: 600px; }
+#login { width: 260px; margin-right: 20px; border: 1px solid #E8E8E8; background-color: #FAFAFA; padding: 20px; }
+#login input[type=text], #login input[type=password] { margin: 4px 0px; width: 150px; font-size: 12px; height: 24px; line-height: 24px; }
+#login label { font-size: 12px; height: 24px; line-height: 24px; }
+#login button { width: 100px; border-style: none; background-color: #012B63; color: #FFFFFF; height: 24px; line-height: 24px; }
+
+#notice { width: 580px; padding: 10px; border: 1px solid #DFDFDF; }
+#notice .title { border: 1px solid #DFDFDF; padding: 5px; background-color: #EFEFEF; display: inline-block; margin-bottom: 10px; }
+#notice ul { margin: 0px; padding: 0px; }
+#notice li { list-style: none; margin: 5px 0px; }
+#notice li .date { float: right; }
 
 footer { font-size: 9pt; color: #969696; margin-top: 20px; }
