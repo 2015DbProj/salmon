@@ -1,4 +1,18 @@
+@CHARSET "UTF-8";
+
 span.btn {
+    display: inline-block;
+    width: 100px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 12px;
+    background-color: #FFFFFF;
+    border: 1px solid #E8E8E8;
+    text-align: center;
+    cursor: pointer;
+}
+
+a.btn {
     display: inline-block;
     width: 100px;
     padding: 5px;

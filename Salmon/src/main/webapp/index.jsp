@@ -25,7 +25,7 @@
 	            <input name="passwd" type="password" placeholder="Password" />
 	            <button>로그인</button>
 	            <div style="text-align: center;">
-	                <span class="btn">회원가입</span><span class="btn">ID/PW찾기</span>
+	                <a class="btn" href="registForm.skhu">회원가입</a><a class="btn">ID/PW찾기</a>
 	            </div>
             </form>
         </div>
