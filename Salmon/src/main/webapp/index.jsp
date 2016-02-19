@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 <%@ page language="java" session="false" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <html>
 <head>
@@ -25,7 +26,7 @@
 	            <input name="passwd" type="password" placeholder="Password" />
 	            <button>로그인</button>
 	            <div style="text-align: center;">
-	                <a class="btn" href="registForm.skhu">회원가입</a><a class="btn">ID/PW찾기</a>
+	                <a class="btn" href='<c:url value="/user/join.skhu?m=init"/>'>회원가입</a><a class="btn">ID/PW찾기</a>
 	            </div>
             </form>
         </div>
