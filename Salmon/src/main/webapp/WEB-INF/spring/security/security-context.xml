@@ -15,31 +15,24 @@
 		<intercept-url pattern="/index.jsp" access="permitAll" />
 		<intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')" />
 		<intercept-url pattern="/user/**" access="permitAll" />
-		<intercept-url pattern="/**"
-			access="hasAnyRole('ROLE_USER','ROLE_TEST','ROLE_ADMIN','ROLE_GUEST')" />
+		<intercept-url pattern="/**" access="hasAnyRole('ROLE_USER','ROLE_TEST','ROLE_ADMIN','ROLE_GUEST')" />
 		<form-login login-page="/user/loginPage"
 			login-processing-url="/user/login"
 			authentication-success-handler-ref="userLoginSuccessHandler"
 			authentication-failure-handler-ref="userLoginFailureHandler"
 			username-parameter="email" password-parameter="passwd" />
 		<session-management>
-			<concurrency-control max-sessions="1"
-				expired-url="/user/loginPage" error-if-maximum-exceeded="true" />
+			<concurrency-control max-sessions="1" expired-url="/user/loginPage" error-if-maximum-exceeded="true" />
 		</session-management>
-		<logout delete-cookies="true" logout-success-url="/"
-			logout-url="/user/logout" invalidate-session="true" />
+		<logout delete-cookies="true" logout-success-url="/" logout-url="/user/logout" invalidate-session="true" />
 		<access-denied-handler ref="userDeniedHandler" />
 	</http>
 
-	<beans:bean id="userDeniedHandler"
-		class="com.min.study.user.service.UserDeniedHandler"></beans:bean>
-	<beans:bean id="userLoginSuccessHandler"
-		class="com.min.study.user.service.UserLoginSuccessHandler"></beans:bean>
-	<beans:bean id="userLoginFailureHandler"
-		class="com.min.study.user.service.UserLoginFailureHandler"></beans:bean>
+	<beans:bean id="userDeniedHandler" class="com.skhu.scs.user.service.UserDeniedHandler"></beans:bean>
+	<beans:bean id="userLoginSuccessHandler" class="com.skhu.scs.user.service.UserLoginSuccessHandler"></beans:bean>
+	<beans:bean id="userLoginFailureHandler" class="com.skhu.scs.user.service.UserLoginFailureHandler"></beans:bean>
 
-	<beans:bean id="userService"
-		class="com.min.study.user.service.UserAuthenticationService">
+	<beans:bean id="userService" class="com.skhu.scs.user.service.UserAuthenticationService">
 		<beans:constructor-arg name="sqlSession" ref="sqlSession" />
 	</beans:bean>
 
@@ -48,8 +41,7 @@
 			<password-encoder ref="passwordEncoder" />
 		</authentication-provider>
 	</authentication-manager>
-
-	<beans:bean id="passwordEncoder"
-		class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
+	
+	<beans:bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
 
 </beans:beans> 
